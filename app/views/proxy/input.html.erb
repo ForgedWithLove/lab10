@@ -1,0 +1,14 @@
+<h1>Нахождение дружественных чисел</h1>
+<%= form_tag(url_for(controller: :proxy, action: :output), :method => "get", id: 'friend_form') do %>
+<%= label_tag("Два числа называются взаимно дружественными, если каждое из них равно сумме всех делителей другого, кроме самого этого числа.") %> <br/>
+<%= label_tag("Найдем дружественные числа в диапазоне от 1 до ") %>
+<%= text_field_tag(:v1)%> <br/>
+<%= submit_tag("Вычислить") %>
+  <select id="my_select" name = "side">
+      <option value = "server">Server XSLT</option>
+      <option value = "client-with-xslt">Client XSLT</option>
+      <option value = "client">RAW</option>
+    </select>
+<% end %>
+
+<div id="result"></div> 
